@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("/Avenir Next LT Pro/Avenir Next LT Pro Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("/Avenir Next LT Pro/Avenir Next LT Pro Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("/Avenir Next LT Pro/Avenir Next LT Pro Demi.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("/Avenir Next LT Pro/Avenir Next LT Pro Heavy.otf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  font-family: "Avenir Next LT Pro", sans-serif;
+}
+
+.text-outline {
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.75);
+}
