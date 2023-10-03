@@ -142,7 +142,7 @@ export default function App() {
                   </button>
                 </div>
                 <div
-                  className={`transition-all duration-700 grid gap-4 overflow-hidden 
+                  className={`transition-all duration-700 grid gap-4 overflow-hidden
                   ${segments === 3 ? "max-h-40 mt-4" : "max-h-0 mt-0"}
                   `}
                 >
@@ -207,7 +207,7 @@ export default function App() {
                   </button>
                 </div>
                 <div
-                  className={`transition-all duration-700 grid gap-4 overflow-hidden 
+                  className={`transition-all duration-700 grid gap-4 overflow-hidden
                   ${segments === 2 ? "max-h-40 mt-4" : "max-h-0 mt-0"}
                   `}
                 >
@@ -283,7 +283,7 @@ export default function App() {
                   </button>
                 </div>
                 <div
-                  className={`transition-all duration-700 grid gap-4 overflow-hidden 
+                  className={`transition-all duration-700 grid gap-4 overflow-hidden
                   ${segments === 4 ? "max-h-40 mt-4" : "max-h-0 mt-0"}
                   `}
                 >
@@ -337,7 +337,7 @@ export default function App() {
                   </button>
                 </div>
                 <div
-                  className={`transition-all duration-700 grid gap-4 overflow-hidden 
+                  className={`transition-all duration-700 grid gap-4 overflow-hidden
                   ${segments === 1 ? "max-h-40 mt-4" : "max-h-0 mt-0"}
                   `}
                 >
@@ -616,7 +616,7 @@ export default function App() {
                 </p>
                 <p className="text-sm mt-4 text-secondary">
                   We love to reward you for what you're doing, that's why we
-                  unlock different rewards depending on the type of points your
+                  unlock different rewards depending on the type of points you're
                   earning - activity or status points. And of course, you'll
                   also have access to our health living benefits to help you
                   become the healthiest version of yourself.
