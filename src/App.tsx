@@ -173,6 +173,17 @@ export default function App() {
                       className="pl-4"
                       onClick={() => {
                         setSegments(3);
+                        setModal("3-5");
+                      }}
+                    >
+                      Testing?
+                    </button>
+                  </div>
+                  <div className="text-sm text-gray-700 ml-2">
+                    <button
+                      className="pl-4"
+                      onClick={() => {
+                        setSegments(3);
                         setModal("3-3");
                       }}
                     >
@@ -397,7 +408,7 @@ export default function App() {
               icons to explore
             </p>
             {height > width && (
-              <p className="text-xs lg:text-sm text-gray-700 flex justify-center font-bold">
+              <p className="text-xs inline-block bg-white p-4 border rounded border-solid border-primary lg:text-sm text-gray-700 flex justify-center font-bold">
                 Rotate your device{" "}
                 <AiOutlineRotateLeft className="text-primary mx-1 text-lg" />{" "}
                 for a better experience
@@ -489,12 +500,20 @@ export default function App() {
                 </p>
               </div>
             </div>
-            <div className="py-12 px-24 bg-ice-blue">
-              <video
+            <div className="py-12 px-24 w-full bg-ice-blue ">
+              {/* <video
                 src="/18296_vitality_customer_interactive_1920x1080_supply2 (1080p).mp4"
                 controls
                 className="w-full aspect-video object-cover"
-              ></video>
+              ></video> */}
+              <iframe
+                width="100%"
+                height="300"
+                src="https://player.vimeo.com/video/874080528"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen=""
+              ></iframe>
             </div>
             <div className="pb-6 pt-2 px-12 w-full flex justify-start">
               <button
@@ -616,10 +635,10 @@ export default function App() {
                 </p>
                 <p className="text-sm mt-4 text-secondary">
                   We love to reward you for what you're doing, that's why we
-                  unlock different rewards depending on the type of points you're
-                  earning - activity or status points. And of course, you'll
-                  also have access to our health living benefits to help you
-                  become the healthiest version of yourself.
+                  unlock different rewards depending on the type of points
+                  you're earning - activity or status points. And of course,
+                  you'll also have access to our health living benefits to help
+                  you become the healthiest version of yourself.
                 </p>
                 <div className="flex justify-between items-start gap-4 mt-8">
                   <div className="flex-1 flex flex-col justify-start items-center">
@@ -1368,6 +1387,65 @@ export default function App() {
               <h1 className="text-2xl font-semibold text-white">
                 Inspirational stories
               </h1>
+              <button
+                className="text-white text-2xl"
+                onClick={() => setModal("")}
+              >
+                <IoIosCloseCircleOutline />
+              </button>
+            </div>
+
+            <div className="w-full px-10 py-8">
+              <h2 className="text-xl text-gray-700 mb-4">
+                "How Vitality changed my life"
+              </h2>
+              <p className="text-sm mt-4 text-secondary">
+                We don't believe life insurance should only be used when the
+                unthinkable happens. Find out how Vitality helped to turn Chris'
+                life around.
+              </p>
+            </div>
+            <div className="py-12 px-24 bg-ice-blue">
+              <video
+                src="/Vitality_Life-Insurance_Inspirational-Stories.mp4"
+                controls
+                className="w-full aspect-video object-cover"
+              ></video>
+            </div>
+            <div className="w-full px-10 py-8">
+              <h2 className="text-xl text-gray-700 mb-4">
+                “I saw it as a chance to kickstart a new me.”
+              </h2>
+              <p className="text-sm mt-4 text-secondary">
+                Find out how how a Vitality life plan helped Annette transform
+                her health and fitness.
+              </p>
+              <a
+                href="https://adviser.vitality.co.uk/insights/annettes-story-i-saw-it-as-a-chance-to-kickstart-a-new-me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
+              >
+                Read more
+              </a>
+              <div className="w-full flex justify-start">
+                <button
+                  className="bg-[#dddddd] text-sm text-[#222222] px-6 py-3 rounded-md mt-4 font-semibold"
+                  onClick={() => {
+                    setModal("");
+                    setSegments(3);
+                  }}
+                >
+                  Return to Life Insurance Land
+                </button>
+              </div>
+            </div>
+          </Modal>
+        )}
+        {modal === "3-5" && (
+          <Modal key="life-5" noPadding>
+            <div className="bg-primary w-full text-white flex justify-between items-center py-8 px-10">
+              <h1 className="text-2xl font-semibold text-white">Testing</h1>
               <button
                 className="text-white text-2xl"
                 onClick={() => setModal("")}
@@ -2184,6 +2262,35 @@ const Scene = ({
                   >
                     <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
                       Making a claim
+                    </p>
+                    <span className="text-4xl lg:text-5xl mb-2 block">
+                      <HiLocationMarker />
+                    </span>
+                  </motion.button>
+                )}
+              </AnimatePresence>
+            </Html>
+          </mesh>
+          <mesh position={[3.1, -0.8, -1.4]}>
+            <boxGeometry args={[0, 0, 0]} />
+            <meshStandardMaterial color="white" />
+            <Html center>
+              <AnimatePresence>
+                {readyToExplore && segment === 3 && !modal && (
+                  <motion.button
+                    initial={{ scale: 0 }}
+                    animate={{
+                      scale: 1,
+                      transition: { delay: 1.3, duration: 0.5 },
+                    }}
+                    exit={{ scale: 0 }}
+                    className="text-primary flex flex-col justify-center items-center"
+                    onClick={() => {
+                      setModal("3-5");
+                    }}
+                  >
+                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                      New one
                     </p>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
