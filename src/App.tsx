@@ -507,12 +507,13 @@ export default function App() {
                 className="w-full aspect-video object-cover"
               ></video> */}
               <iframe
-                width="100%"
-                height="300"
-                src="https://player.vimeo.com/video/874080528"
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/jb6E2jiha1o?si=VI7bsevm9f6bc1j7"
+                title="YouTube video player"
                 frameborder="0"
-                allow="autoplay; encrypted-media"
-                allowfullscreen=""
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
               ></iframe>
             </div>
             <div className="pb-6 pt-2 px-12 w-full flex justify-start">
