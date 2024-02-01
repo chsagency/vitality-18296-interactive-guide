@@ -60,7 +60,10 @@ export default function App() {
             className="fixed top-8 left-8 bg-primary text-white p-2 rounded-full text-2xl z-10"
             onClick={() => setSegments(0)}
           >
-            <BiSolidHome />
+            <div className="flex gap-1">
+              <BiSolidHome />
+              <span className="text-md">Home</span>
+            </div>
           </motion.button>
         )}
         {isLoaded && (
@@ -733,6 +736,7 @@ export default function App() {
                 href="https://members.vitality.co.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="underline font-bold"
               >
                 Member Zone
               </a>
@@ -900,6 +904,7 @@ export default function App() {
                   href="https://members.vitality.co.uk/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="underline font-bold"
                 >
                   Member Zone
                 </a>{" "}
@@ -1144,7 +1149,7 @@ export default function App() {
         {modal === "3-0" && (
           <Modal key="life-1">
             <h1 className="text-2xl font-semibold text-primary mb-4">
-              Life Insurance Land
+              2. Life Insurance Land
             </h1>
             <h2 className="text-xl font-light text-gray-700 mb-4">
               Insurance with reassurance
@@ -1162,6 +1167,7 @@ export default function App() {
                 href="https://members.vitality.co.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="underline font-bold"
               >
                 Member Zone
               </a>
@@ -1912,9 +1918,11 @@ const Scene = ({
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
-                    <p className="font-bold text-xs lg:text-sm transform -translate-x-12 text-outline">
-                      Rewardsville
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 py-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-xs lg:text-sm text-outline">
+                        4. Rewardsville
+                      </p>
+                    </div>
                   </motion.button>
                 )}
               </AnimatePresence>
@@ -1938,9 +1946,11 @@ const Scene = ({
                       setModal("1-1");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      What's a Vitality status?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        What's a Vitality status?
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -1967,9 +1977,11 @@ const Scene = ({
                       setModal("1-2");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      How do I get points?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        How do I get points?
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -1996,9 +2008,11 @@ const Scene = ({
                       setModal("1-3");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      What rewards do I get?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        What rewards do I get?
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2027,9 +2041,11 @@ const Scene = ({
                       setModal("2-0");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-xs lg:text-sm text-outline">
-                      Health Insurance Hills
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 py-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-xs lg:text-sm text-outline">
+                        1. Health Insurance Hills
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2056,9 +2072,11 @@ const Scene = ({
                       setModal("2-1");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      What's included?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        What's included?
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2085,9 +2103,11 @@ const Scene = ({
                       setModal("2-2");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Using your health plan
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Using your health plan
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2114,9 +2134,11 @@ const Scene = ({
                       setModal("2-3");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Speaking to a GP
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Speaking to a GP
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2143,9 +2165,11 @@ const Scene = ({
                       setModal("2-4");
                     }}
                   >
-                    <p className="font-bold w-52 text-sm lg:text-lg text-outline">
-                      Full Cover Promise
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold w-52 text-sm lg:text-lg text-outline">
+                        Full Cover Promise
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2172,9 +2196,11 @@ const Scene = ({
                       setModal("2-5");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Inspirational stories
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Inspirational stories
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2203,9 +2229,11 @@ const Scene = ({
                       setModal("3-0");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-xs lg:text-sm text-outline">
-                      Life Insurance Land
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 py-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-xs lg:text-sm text-outline">
+                        2. Life Insurance Land
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2232,9 +2260,11 @@ const Scene = ({
                       setModal("3-1");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      What's included?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        What's included?
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2261,38 +2291,11 @@ const Scene = ({
                       setModal("3-2");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Making a claim
-                    </p>
-                    <span className="text-4xl lg:text-5xl mb-2 block">
-                      <HiLocationMarker />
-                    </span>
-                  </motion.button>
-                )}
-              </AnimatePresence>
-            </Html>
-          </mesh>
-          <mesh position={[3.1, -0.8, -1.4]}>
-            <boxGeometry args={[0, 0, 0]} />
-            <meshStandardMaterial color="white" />
-            <Html center>
-              <AnimatePresence>
-                {readyToExplore && segment === 3 && !modal && (
-                  <motion.button
-                    initial={{ scale: 0 }}
-                    animate={{
-                      scale: 1,
-                      transition: { delay: 1.3, duration: 0.5 },
-                    }}
-                    exit={{ scale: 0 }}
-                    className="text-primary flex flex-col justify-center items-center"
-                    onClick={() => {
-                      setModal("3-5");
-                    }}
-                  >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      New one
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Making a claim
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2319,9 +2322,11 @@ const Scene = ({
                       setModal("3-3");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Have you Optimised?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Have you Optimised?
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2348,9 +2353,11 @@ const Scene = ({
                       setModal("3-4");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Inspirational stories
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Inspirational stories
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2382,9 +2389,11 @@ const Scene = ({
                     <span className="text-4xl lg:text-5xl mb-2 mt-2 block">
                       <HiLocationMarker />
                     </span>
-                    <p className="font-bold whitespace-nowrap text-xs lg:text-sm transform translate-x-16 text-outline">
-                      Programme Parkway
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 py-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-xs lg:text-sm text-outline">
+                        3. Programme Parkway
+                      </p>
+                    </div>
                   </motion.button>
                 )}
               </AnimatePresence>
@@ -2408,9 +2417,11 @@ const Scene = ({
                       setModal("4-1");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      How do I get started?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        How do I get started?
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2437,9 +2448,11 @@ const Scene = ({
                       setModal("4-2");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      How to register
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        How to register
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2466,9 +2479,11 @@ const Scene = ({
                       setModal("4-3");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Tracking your activity
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Tracking your activity
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
