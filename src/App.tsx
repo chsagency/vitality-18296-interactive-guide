@@ -2272,35 +2272,6 @@ const Scene = ({
               </AnimatePresence>
             </Html>
           </mesh>
-          <mesh position={[3.1, -0.8, -1.4]}>
-            <boxGeometry args={[0, 0, 0]} />
-            <meshStandardMaterial color="white" />
-            <Html center>
-              <AnimatePresence>
-                {readyToExplore && segment === 3 && !modal && (
-                  <motion.button
-                    initial={{ scale: 0 }}
-                    animate={{
-                      scale: 1,
-                      transition: { delay: 1.3, duration: 0.5 },
-                    }}
-                    exit={{ scale: 0 }}
-                    className="text-primary flex flex-col justify-center items-center"
-                    onClick={() => {
-                      setModal("3-5");
-                    }}
-                  >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      New one
-                    </p>
-                    <span className="text-4xl lg:text-5xl mb-2 block">
-                      <HiLocationMarker />
-                    </span>
-                  </motion.button>
-                )}
-              </AnimatePresence>
-            </Html>
-          </mesh>
           <mesh position={[4.2, -0.8, 0.7]}>
             <boxGeometry args={[0, 0, 0]} />
             <meshStandardMaterial color="white" />
