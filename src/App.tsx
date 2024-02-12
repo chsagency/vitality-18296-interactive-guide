@@ -501,11 +501,6 @@ export default function App() {
               </div>
             </div>
             <div className="py-12 px-24 w-full bg-ice-blue ">
-              {/* <video
-                src="/18296_vitality_customer_interactive_1920x1080_supply2 (1080p).mp4"
-                controls
-                className="w-full aspect-video object-cover"
-              ></video> */}
               <iframe
                 width="560"
                 height="315"
@@ -856,12 +851,16 @@ export default function App() {
                 appointment? Head to the Vitality Care Hub
               </h2>
             </div>
-            <div className="py-12 px-24 pb-0 bg-ice-blue">
-              <video
-                src="/Vitality_Health-Insurance_Using-Health-Plan.mp4"
-                controls
-                className="w-full aspect-video object-cover"
-              ></video>
+            <div className="py-12 px-24 pb-0 w-full bg-ice-blue">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/YyiwVKWnf2A"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
             </div>
             <div className="w-full bg-ice-blue px-10 py-6"></div>
             <div className="w-full px-10 py-8 pb-6">
@@ -933,7 +932,7 @@ export default function App() {
               </button>
             </div>
 
-            <div className="w-full px-10 py-8">
+            <div className="w-full px-10 pt-8 pb-4">
               <h2 className="text-xl text-gray-700 mb-4">
                 Make an appointment on your terms, with the Vitality GP App
               </h2>
@@ -954,14 +953,7 @@ export default function App() {
                 Read how
               </a>
             </div>
-            <div className="py-12 px-24 bg-ice-blue">
-              <video
-                src="/Vitality_Health-Insurance_Speak-to-GP.mp4"
-                controls
-                className="w-full aspect-video object-cover"
-              ></video>
-            </div>
-            <div className="w-full px-10 py-8 text-secondary">
+            <div className="w-full px-10 pb-8 text-secondary">
               <p className="text-sm mt-4">
                 Using the Vitality GP App enables you to speak with a GP
                 wherever you are.
@@ -1119,12 +1111,16 @@ export default function App() {
                 Watch below to find out how getting involved with parkrun turned
                 Curtis' life around.
               </p>
-              <div className="px-12">
-                <video
-                  src="/Vitality_Health-Insurance_Inspirational-Stories.mp4"
-                  controls
-                  className="w-full aspect-video object-cover mt-12"
-                ></video>
+              <div className="px-12 pt-12">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/JrUfHafBvg4"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
             <div className="pb-6 pt-2 px-10 w-full flex justify-start">
@@ -1406,12 +1402,16 @@ export default function App() {
                 life around.
               </p>
             </div>
-            <div className="py-12 px-24 bg-ice-blue">
-              <video
-                src="/Vitality_Life-Insurance_Inspirational-Stories.mp4"
-                controls
-                className="w-full aspect-video object-cover"
-              ></video>
+            <div className="py-12 px-24 w-full bg-ice-blue">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/VJZ-gnavgts"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
             </div>
             <div className="w-full px-10 py-8">
               <h2 className="text-xl text-gray-700 mb-4">
