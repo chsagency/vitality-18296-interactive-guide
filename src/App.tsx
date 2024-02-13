@@ -523,7 +523,7 @@ export default function App() {
                   setSegments(1);
                 }}
               >
-                Return to Rewardsville
+                Return to World of Vitality
               </button>
             </div>
           </Modal>
@@ -576,10 +576,7 @@ export default function App() {
                   <li>Take a Vitality Healthcheck for a points boost</li>
                 </ul>
                 <p className="text-sm mt-4 text-secondary">
-                  As you get more points, you unlock more rewards. You can
-                  unlock all kinds of treats - weekly handcrafted drinks,
-                  monthly trips to the cinema, movies at home and even discounts
-                  on hotel stays.
+                  As you get more points, you unlock more rewards.
                 </p>
                 <div className="border-2 border-primary mt-4 p-4 rounded-lg">
                   <p className="text-sm font-semibold text-secondary">
@@ -600,7 +597,7 @@ export default function App() {
                       setSegments(1);
                     }}
                   >
-                    Return to Rewardsville
+                    Return to World of Vitality
                   </button>
                 </div>
               </div>
@@ -635,10 +632,11 @@ export default function App() {
                 </p>
                 <p className="text-sm mt-4 text-secondary">
                   We love to reward you for what you're doing, that's why we
-                  unlock different rewards depending on the type of points
-                  you're earning - activity or status points. And of course,
-                  you'll also have access to our health living benefits to help
-                  you become the healthiest version of yourself.
+                  unlock different rewards depending on the type of plan you
+                  hold and points you're earning - activity or status points.
+                  And of course, you'll also have access to our health living
+                  benefits to help you become the healthiest version of
+                  yourself.
                 </p>
                 <div className="flex justify-between items-start gap-4 mt-8">
                   <div className="flex-1 flex flex-col justify-start items-center">
@@ -652,7 +650,8 @@ export default function App() {
                     </h3>
                     <p className="text-center text-sm mt-2 text-secondary">
                       That are unlocked with your activity points, including
-                      handcrafted drinks at Caffè Nero and trips to the cinema.
+                      discounts on handcrafted drinks at Caffè Nero and trips to
+                      the cinema*.
                     </p>
                   </div>
                   <div className="flex-1 flex flex-col justify-start items-center">
@@ -667,8 +666,8 @@ export default function App() {
                     <p className="text-center text-sm mt-2 text-secondary">
                       Rewards and discounts available for Vitality members, so
                       you can become the healthiest version of yourself. From
-                      cashback on healthy food, to discounts on fitness trackers
-                      and weight loss programmes.
+                      discounts on healthy food, to discounts on fitness
+                      trackers and weight loss programmes.
                     </p>
                   </div>
                   <div className="flex-1 flex flex-col justify-start items-center">
@@ -703,9 +702,13 @@ export default function App() {
                       setSegments(1);
                     }}
                   >
-                    Return to Rewardsville
+                    Return to World of Vitality
                   </button>
                 </div>
+
+                <p className="text-xs mt-4 text-secondary">
+                  *Eligibility applies.
+                </p>
               </div>
             </div>
           </Modal>
@@ -717,7 +720,7 @@ export default function App() {
               Health Insurance Hills
             </h1>
             <h2 className="text-xl font-light text-gray-700 mb-4">
-              Health insurance that rewards healthy habits
+              Health insurance you can use every day
             </h2>
             <p className="text-center text-sm text-secondary">
               With our health insurance, you can get fast access to private
@@ -761,25 +764,13 @@ export default function App() {
             </div>
             <div className="w-full px-10 py-8 flex justify-between items-center gap-4">
               <div className="flex-1">
-                <h2 className="text-xl text-gray-700 mb-4">
-                  Our health insurance includes:
-                </h2>
                 <ul className="text-sm list-disc list-outside ml-3.5 text-secondary">
                   <li>
-                    Access to a virtual GP, so you can get a diagnosis quickly,
-                    with no hassle
+                    Enjoy award-winning cover - from fast access to a GP, physio
+                    and mental health support to personal care for cancer
                   </li>
-                  <li>
-                    Self referral for physiotherapy and mental health treatment
-                    - so you can work with us to get back to the very best
-                    version of yourself
-                  </li>
-                  <li>Fast access to specialist treatment</li>
-                  <li>Access to cutting edge technology and treatments </li>
-                  <li>
-                    Treatment with our Premier Consultants, often resulting in
-                    lower lengths of stay in hospital
-                  </li>
+                  <li>Manage your care from the palm of your hand</li>
+                  <li>Get inspired to be healthier and get rewarded for it</li>
                 </ul>
                 <p className="font-semibold text-sm mt-4 text-secondary">
                   For your specific cover, please go to your app or the Member
@@ -793,7 +784,7 @@ export default function App() {
                       setSegments(2);
                     }}
                   >
-                    Return to Health Insurance Hills
+                    Return to the World of Vitality
                   </button>
                 </div>
               </div>
@@ -914,7 +905,7 @@ export default function App() {
                     setSegments(2);
                   }}
                 >
-                  Return to Health Insurance Hills
+                  Return to World of Vitality
                 </button>
               </div>
             </div>
@@ -984,7 +975,7 @@ export default function App() {
                     setSegments(2);
                   }}
                 >
-                  Return to Health Insurance Hills
+                  Return to World of Vitality
                 </button>
               </div>
             </div>
@@ -1027,7 +1018,7 @@ export default function App() {
                       setSegments(2);
                     }}
                   >
-                    Return to Health Insurance Hills
+                    Return to World of Vitality
                   </button>
                 </div>
               </div>
@@ -1136,7 +1127,7 @@ export default function App() {
                   setSegments(2);
                 }}
               >
-                Return to Health Insurance Hills
+                Return to World of Vitality
               </button>
             </div>
           </Modal>
@@ -1148,12 +1139,12 @@ export default function App() {
               2. Life Insurance Land
             </h1>
             <h2 className="text-xl font-light text-gray-700 mb-4">
-              Insurance with reassurance
+              Life insurance that makes you healthier
             </h2>
             <p className="text-center text-sm text-secondary">
               Both our Life Cover and Serious Illness Cover give you peace of
               mind, knowing your cover is in place should you be diagnosed with
-              a serious illness* or pass away. Plus, as a Vitality member, you
+              a serious illness• or pass away. Plus, as a Vitality member, you
               are rewarded for leading a healthier lifestyle.
             </p>
             <p className="text-center text-sm mt-4 text-secondary">
@@ -1170,7 +1161,7 @@ export default function App() {
               .
             </p>
             <p className="text-center text-sm mt-4 text-secondary">
-              *Please reference your policy documents to see which serious
+              *Please reference your plan documents to see which serious
               illnesses you're covered for.
             </p>
             <button
@@ -1340,7 +1331,7 @@ export default function App() {
             <div className="w-full px-10 py-8 flex justify-between items-center gap-4">
               <div className="flex-1">
                 <p className="text-sm text-secondary">
-                  When you bought your plan, you might have chosen to add an
+                  When you bought your plan, you might have chosen to add
                   Optimiser. This gives you extra benefits, like up to 40% off
                   your life insurance premiums, the opportunity to keep your
                   premiums lower and access to a wider range of Vitality
@@ -1349,8 +1340,8 @@ export default function App() {
                 <p className="text-sm mt-4 text-secondary">
                   If you haven’t added Optimiser or had it before, you can still
                   add it to your plan*. Just call our friendly team on 080 8149
-                  6315 (Mon - Thurs 9am - 8pm, Fri 9am - 6pm, Sat 10am - 2pm).
-                  We’re always happy to help.
+                  6315 (Mon - Thurs 9am - 8pm, Fri 9am - 6pm, Sat 10am - 2pm) or
+                  call your Financial Adviser.
                 </p>
                 <div className="w-full flex justify-start">
                   <button
@@ -1433,7 +1424,7 @@ export default function App() {
                     setSegments(3);
                   }}
                 >
-                  Return to Life Insurance Land
+                  Return to the World of Vitality
                 </button>
               </div>
             </div>
@@ -1561,9 +1552,9 @@ export default function App() {
                   improve your fitness and wellbeing.
                 </p>
                 <p className="text-sm mt-4 text-secondary">
-                  The healthier you get, the greater discounts and benefits
-                  you'll unlock. But you'll need to register to get started -
-                  download the Vitality Member app to get set up.
+                  The healthier you get, the greater the rewards you'll unlock.
+                  But you'll need to register to get started - download the
+                  Vitality Member app to get set up
                 </p>
                 <a
                   href="https://www.vitality.co.uk/support/vitality-programme/"
@@ -1581,7 +1572,7 @@ export default function App() {
                       setSegments(4);
                     }}
                   >
-                    Return to Programme Parkway
+                    Return to World of Vitality
                   </button>
                 </div>
               </div>
@@ -1701,7 +1692,7 @@ export default function App() {
                       setSegments(4);
                     }}
                   >
-                    Return to Programme Parkway
+                    Return to World of Vitality
                   </button>
                 </div>
               </div>
@@ -1781,7 +1772,7 @@ export default function App() {
                       setSegments(4);
                     }}
                   >
-                    Return to Programme Parkway
+                    Return to World of Vitality
                   </button>
                 </div>
               </div>
