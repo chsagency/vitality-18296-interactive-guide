@@ -492,6 +492,7 @@ export default function App() {
                     href="https://members.vitality.co.uk/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="underline font-bold"
                   >
                     Member Zone
                   </a>
@@ -1510,6 +1511,7 @@ export default function App() {
                 href="https://members.vitality.co.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="underline font-bold"
               >
                 Member Zone
               </a>
