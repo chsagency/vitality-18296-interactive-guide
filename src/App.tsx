@@ -18,6 +18,7 @@ import { BiSolidHome, BiMenu } from "react-icons/bi";
 import { HiLocationMarker, HiChevronRight } from "react-icons/hi";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { AiOutlineDrag, AiOutlineRotateLeft } from "react-icons/ai";
+import { MdPinch } from "react-icons/md";
 import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
 import { useWindowSize } from "react-use";
@@ -389,11 +390,11 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 1 } }}
             exit={{ opacity: 0 }}
-            className="fixed bottom-8 right-8 z-10 flex flex-col items-end"
+            className="fixed bottom-8 right-8 z-10 flex flex-col items-end bg-white bg-opacity-80 rounded pt-3 pb-2 px-4"
           >
             <p className="text-xs lg:text-sm text-gray-700 flex justify-center mb-2">
               Pinch to zoom{" "}
-              <AiOutlineDrag className="text-primary mx-1 text-base lg:text-lg" />{" "}
+              <MdPinch className="text-primary mx-1 text-base lg:text-lg" />{" "}
             </p>
             <p className="text-xs lg:text-sm text-gray-700 flex justify-center mb-2">
               Hold and Drag{" "}
