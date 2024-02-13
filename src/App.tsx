@@ -1140,7 +1140,7 @@ export default function App() {
             <p className="text-center text-sm text-secondary">
               Both our Life Cover and Serious Illness Cover give you peace of
               mind, knowing your cover is in place should you be diagnosed with
-              a serious illness• or pass away. Plus, as a Vitality member, you
+              a serious illness* or pass away. Plus, as a Vitality member, you
               are rewarded for leading a healthier lifestyle.
             </p>
             <p className="text-center text-sm mt-4 text-secondary">
