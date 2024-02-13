@@ -18,6 +18,7 @@ import { BiSolidHome, BiMenu } from "react-icons/bi";
 import { HiLocationMarker, HiChevronRight } from "react-icons/hi";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { AiOutlineDrag, AiOutlineRotateLeft } from "react-icons/ai";
+import { MdPinch } from "react-icons/md";
 import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
 import { useWindowSize } from "react-use";
@@ -60,7 +61,12 @@ export default function App() {
             className="fixed top-8 left-8 bg-primary text-white p-2 rounded-full text-2xl z-10"
             onClick={() => setSegments(0)}
           >
-            <BiSolidHome />
+            <div className="flex gap-1">
+              <BiSolidHome />
+              <span className="text-sm pt-1 pr-1 hidden md:inline">
+                Back to Vitality World
+              </span>
+            </div>
           </motion.button>
         )}
         {isLoaded && (
@@ -84,7 +90,7 @@ export default function App() {
           <Modal key="explore">
             <h1 className="text-2xl font-bold text-primary mb-4">Welcome</h1>
             <p className="text-center text-sm">
-              Welcome to the Vitality village - an easy-to-navigate guide,
+              Welcome to the World of Vitality - an easy-to-navigate guide,
               helping you to get the most from your insurance and understand how
               to use it, should you need to.
             </p>
@@ -173,21 +179,10 @@ export default function App() {
                       className="pl-4"
                       onClick={() => {
                         setSegments(3);
-                        setModal("3-5");
-                      }}
-                    >
-                      Testing?
-                    </button>
-                  </div>
-                  <div className="text-sm text-gray-700 ml-2">
-                    <button
-                      className="pl-4"
-                      onClick={() => {
-                        setSegments(3);
                         setModal("3-3");
                       }}
                     >
-                      Have you Optimised?
+                      Get more from your Life plan
                     </button>
                   </div>
                   <div className="text-sm text-gray-700 ml-2">
@@ -395,8 +390,12 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 1 } }}
             exit={{ opacity: 0 }}
-            className="fixed bottom-8 right-8 z-10 flex flex-col items-end"
+            className="fixed bottom-8 right-8 z-10 flex flex-col items-end bg-white bg-opacity-80 rounded pt-3 pb-2 px-4"
           >
+            <p className="text-xs lg:text-sm text-gray-700 flex justify-center mb-2">
+              Pinch to zoom{" "}
+              <MdPinch className="text-primary mx-1 text-base lg:text-lg" />{" "}
+            </p>
             <p className="text-xs lg:text-sm text-gray-700 flex justify-center mb-2">
               Hold and Drag{" "}
               <AiOutlineDrag className="text-primary mx-1 text-base lg:text-lg" />{" "}
@@ -728,6 +727,7 @@ export default function App() {
                 href="https://members.vitality.co.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="underline font-bold"
               >
                 Member Zone
               </a>
@@ -899,6 +899,7 @@ export default function App() {
                   href="https://members.vitality.co.uk/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="underline font-bold"
                 >
                   Member Zone
                 </a>{" "}
@@ -1140,15 +1141,15 @@ export default function App() {
         {modal === "3-0" && (
           <Modal key="life-1">
             <h1 className="text-2xl font-semibold text-primary mb-4">
-              Life Insurance Land
+              2. Life Insurance Land
             </h1>
             <h2 className="text-xl font-light text-gray-700 mb-4">
               Insurance with reassurance
             </h2>
             <p className="text-center text-sm text-secondary">
-              Both our life insurance and serious illness cover give you peace
-              of mind, knowing your cover is in place should you pass away or be
-              diagnosed with a serious illness*. Plus, as a Vitality member, you
+              Both our Life Cover and Serious Illness Cover give you peace of
+              mind, knowing your cover is in place should you be diagnosed with
+              a serious illness* or pass away. Plus, as a Vitality member, you
               are rewarded for leading a healthier lifestyle.
             </p>
             <p className="text-center text-sm mt-4 text-secondary">
@@ -1158,21 +1159,15 @@ export default function App() {
                 href="https://members.vitality.co.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="underline font-bold"
               >
                 Member Zone
               </a>
               .
             </p>
             <p className="text-center text-sm mt-4 text-secondary">
-              *Please reference your plan documents in the{" "}
-              <a
-                href="https://members.vitality.co.uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Member Zone
-              </a>{" "}
-              to see which serious illnesses you're covered for.
+              *Please reference your policy documents to see which serious
+              illnesses you're covered for.
             </p>
             <button
               onClick={() => setModal("")}
@@ -1218,7 +1213,7 @@ export default function App() {
                       setSegments(3);
                     }}
                   >
-                    Return to Life Insurance Land
+                    Return to the World of Vitality
                   </button>
                 </div>
               </div>
@@ -1318,7 +1313,7 @@ export default function App() {
                       setSegments(3);
                     }}
                   >
-                    Return to Life Insurance Land
+                    Return to the World of Vitality
                   </button>
                 </div>
               </div>
@@ -1329,7 +1324,7 @@ export default function App() {
           <Modal key="life-4" noPadding>
             <div className="bg-primary w-full text-white flex justify-between items-center py-8 px-10">
               <h1 className="text-2xl font-semibold text-white">
-                Have you Optimised?
+                Get more from your Life plan
               </h1>
               <button
                 className="text-white text-2xl"
@@ -1340,10 +1335,7 @@ export default function App() {
             </div>
             <div className="w-full px-10 py-8 flex justify-between items-center gap-4">
               <div className="flex-1">
-                <h2 className="text-xl text-gray-700 mb-4">
-                  Getting the most from Vitality
-                </h2>
-                <p className="text-sm mt-4 text-secondary">
+                <p className="text-sm text-secondary">
                   When you bought your plan, you might have chosen to add an
                   Optimiser. This gives you extra benefits, like up to 40% off
                   your life insurance premiums, the opportunity to keep your
@@ -1352,7 +1344,7 @@ export default function App() {
                 </p>
                 <p className="text-sm mt-4 text-secondary">
                   If you haven’t added Optimiser or had it before, you can still
-                  add it to your plan. Just call our friendly team on 080 8149
+                  add it to your plan*. Just call our friendly team on 080 8149
                   6315 (Mon - Thurs 9am - 8pm, Fri 9am - 6pm, Sat 10am - 2pm).
                   We’re always happy to help.
                 </p>
@@ -1364,9 +1356,13 @@ export default function App() {
                       setSegments(3);
                     }}
                   >
-                    Return to Life Insurance Land
+                    Return to the World of Vitality
                   </button>
                 </div>
+
+                <p className="text-xs mt-4 text-secondary">
+                  *Eligibility applies.
+                </p>
               </div>
               <div
                 style={{
@@ -1912,9 +1908,11 @@ const Scene = ({
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
-                    <p className="font-bold text-xs lg:text-sm transform -translate-x-12 text-outline">
-                      Rewardsville
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 py-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-xs lg:text-sm text-outline">
+                        4. Rewardsville
+                      </p>
+                    </div>
                   </motion.button>
                 )}
               </AnimatePresence>
@@ -1938,9 +1936,11 @@ const Scene = ({
                       setModal("1-1");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      What's a Vitality status?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        What's a Vitality status?
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -1967,9 +1967,11 @@ const Scene = ({
                       setModal("1-2");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      How do I get points?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        How do I get points?
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -1996,9 +1998,11 @@ const Scene = ({
                       setModal("1-3");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      What rewards do I get?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        What rewards do I get?
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2027,9 +2031,11 @@ const Scene = ({
                       setModal("2-0");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-xs lg:text-sm text-outline">
-                      Health Insurance Hills
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 py-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-xs lg:text-sm text-outline">
+                        1. Health Insurance Hills
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2056,9 +2062,11 @@ const Scene = ({
                       setModal("2-1");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      What's included?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        What's included?
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2085,9 +2093,11 @@ const Scene = ({
                       setModal("2-2");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Using your health plan
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Using your health plan
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2114,9 +2124,11 @@ const Scene = ({
                       setModal("2-3");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Speaking to a GP
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Speaking to a GP
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2143,9 +2155,11 @@ const Scene = ({
                       setModal("2-4");
                     }}
                   >
-                    <p className="font-bold w-52 text-sm lg:text-lg text-outline">
-                      Full Cover Promise
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold w-52 text-sm lg:text-lg text-outline">
+                        Full Cover Promise
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2172,9 +2186,11 @@ const Scene = ({
                       setModal("2-5");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Inspirational stories
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Inspirational stories
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2203,9 +2219,11 @@ const Scene = ({
                       setModal("3-0");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-xs lg:text-sm text-outline">
-                      Life Insurance Land
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 py-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-xs lg:text-sm text-outline">
+                        2. Life Insurance Land
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2232,9 +2250,11 @@ const Scene = ({
                       setModal("3-1");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      What's included?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        What's included?
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2261,9 +2281,11 @@ const Scene = ({
                       setModal("3-2");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Making a claim
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Making a claim
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2290,9 +2312,11 @@ const Scene = ({
                       setModal("3-3");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Have you Optimised?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Get more from your Life plan
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2319,9 +2343,11 @@ const Scene = ({
                       setModal("3-4");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Inspirational stories
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Inspirational stories
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2353,9 +2379,11 @@ const Scene = ({
                     <span className="text-4xl lg:text-5xl mb-2 mt-2 block">
                       <HiLocationMarker />
                     </span>
-                    <p className="font-bold whitespace-nowrap text-xs lg:text-sm transform translate-x-16 text-outline">
-                      Programme Parkway
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 py-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-xs lg:text-sm text-outline">
+                        3. Programme Parkway
+                      </p>
+                    </div>
                   </motion.button>
                 )}
               </AnimatePresence>
@@ -2379,9 +2407,11 @@ const Scene = ({
                       setModal("4-1");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      How do I get started?
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        How do I get started?
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2408,9 +2438,11 @@ const Scene = ({
                       setModal("4-2");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      How to register
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        How to register
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
@@ -2437,9 +2469,11 @@ const Scene = ({
                       setModal("4-3");
                     }}
                   >
-                    <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
-                      Tracking your activity
-                    </p>
+                    <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
+                      <p className="font-bold whitespace-nowrap text-sm lg:text-lg text-outline">
+                        Tracking your activity
+                      </p>
+                    </div>
                     <span className="text-4xl lg:text-5xl mb-2 block">
                       <HiLocationMarker />
                     </span>
