@@ -2608,7 +2608,6 @@ const Camera = ({ segment }: { segment: number }) => {
       camera.rotation.y = camRef.current.rotY;
       camera.rotation.z = camRef.current.rotZ;
     }
-    // console.log(camRef.current);
   });
 
   return (
