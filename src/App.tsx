@@ -392,12 +392,14 @@ export default function App() {
             exit={{ opacity: 0 }}
             className="fixed bottom-8 right-8 z-10 flex flex-col items-end bg-white bg-opacity-80 rounded pt-3 pb-2 px-4"
           >
-            <p className="text-xs lg:text-sm text-gray-700 flex justify-center mb-2">
+            <p className="text-xs lg:text-sm text-gray-700 flex justify-center mb-2 inline lg:hidden">
               Pinch to zoom{" "}
               <MdPinch className="text-primary mx-1 text-base lg:text-lg" />{" "}
             </p>
             <p className="text-xs lg:text-sm text-gray-700 flex justify-center mb-2">
-              Hold and Drag{" "}
+              <span className="me-1 hidden lg:inline">Click</span>
+              <span className="me-1 inline lg:hidden">Hold</span>
+              and Drag{" "}
               <AiOutlineDrag className="text-primary mx-1 text-base lg:text-lg" />{" "}
               to to look around
             </p>
