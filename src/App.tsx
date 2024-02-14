@@ -64,7 +64,7 @@ export default function App() {
             <div className="flex gap-1">
               <BiSolidHome />
               <span className="text-sm pt-1 pr-1 hidden md:inline">
-                Back to Vitality World
+                Back to the World of Vitality
               </span>
             </div>
           </motion.button>
@@ -500,7 +500,7 @@ export default function App() {
                 </p>
               </div>
             </div>
-            <div className="py-12 px-24 w-full bg-ice-blue ">
+            <div className="py-12 flex justify-center w-full bg-ice-blue ">
               <iframe
                 width="560"
                 height="315"
@@ -843,7 +843,7 @@ export default function App() {
                 appointment? Head to the Vitality Care Hub
               </h2>
             </div>
-            <div className="py-12 px-24 pb-0 w-full bg-ice-blue">
+            <div className="pt-12 pb-0 flex justify-center w-full bg-ice-blue">
               <iframe
                 width="560"
                 height="315"
@@ -1104,7 +1104,7 @@ export default function App() {
                 Watch below to find out how getting involved with parkrun turned
                 Curtis' life around.
               </p>
-              <div className="px-12 pt-12">
+              <div className="pt-12 pb-0 flex justify-center">
                 <iframe
                   width="560"
                   height="315"
@@ -1390,7 +1390,7 @@ export default function App() {
                 life around.
               </p>
             </div>
-            <div className="py-12 px-24 w-full bg-ice-blue">
+            <div className="py-12 flex justify-center w-full bg-ice-blue">
               <iframe
                 width="560"
                 height="315"
