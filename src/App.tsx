@@ -135,71 +135,6 @@ export default function App() {
                 <div className="text-sm font-semibold bg-primary text-white rounded-full">
                   <button
                     className="flex justify-between items-center w-full px-4 py-2"
-                    onClick={() => setSegments(3)}
-                  >
-                    <p className="flex-1 text-left">Life Insurance Land</p>
-                    <div>
-                      <HiChevronRight
-                        className={`transform transition-all duration-300 ${
-                          segments === 3 ? "rotate-90" : ""
-                        }`}
-                      />
-                    </div>
-                  </button>
-                </div>
-                <div
-                  className={`transition-all duration-700 grid gap-4 overflow-hidden
-                  ${segments === 3 ? "max-h-40 mt-4" : "max-h-0 mt-0"}
-                  `}
-                >
-                  <div className="text-sm text-gray-700 ml-2">
-                    <button
-                      className="pl-4"
-                      onClick={() => {
-                        setSegments(3);
-                        setModal("3-1");
-                      }}
-                    >
-                      What's included?
-                    </button>
-                  </div>
-                  <div className="text-sm text-gray-700 ml-2">
-                    <button
-                      className="pl-4"
-                      onClick={() => {
-                        setSegments(3);
-                        setModal("3-2");
-                      }}
-                    >
-                      Making a claim
-                    </button>
-                  </div>
-                  <div className="text-sm text-gray-700 ml-2">
-                    <button
-                      className="pl-4"
-                      onClick={() => {
-                        setSegments(3);
-                        setModal("3-3");
-                      }}
-                    >
-                      Get more from your Life plan
-                    </button>
-                  </div>
-                  <div className="text-sm text-gray-700 ml-2">
-                    <button
-                      className="pl-4"
-                      onClick={() => {
-                        setSegments(3);
-                        setModal("3-4");
-                      }}
-                    >
-                      Inspirational stories
-                    </button>
-                  </div>
-                </div>
-                <div className="text-sm font-semibold bg-primary text-white rounded-full mt-4">
-                  <button
-                    className="flex justify-between items-center w-full px-4 py-2"
                     onClick={() => setSegments(2)}
                   >
                     <p className="flex-1 text-left">Health Insurance Hills</p>
@@ -267,6 +202,71 @@ export default function App() {
                       onClick={() => {
                         setSegments(2);
                         setModal("2-5");
+                      }}
+                    >
+                      Inspirational stories
+                    </button>
+                  </div>
+                </div>
+                <div className="text-sm font-semibold bg-primary text-white rounded-full mt-4">
+                  <button
+                    className="flex justify-between items-center w-full px-4 py-2"
+                    onClick={() => setSegments(3)}
+                  >
+                    <p className="flex-1 text-left">Life Insurance Land</p>
+                    <div>
+                      <HiChevronRight
+                        className={`transform transition-all duration-300 ${
+                          segments === 3 ? "rotate-90" : ""
+                        }`}
+                      />
+                    </div>
+                  </button>
+                </div>
+                <div
+                  className={`transition-all duration-700 grid gap-4 overflow-hidden
+                  ${segments === 3 ? "max-h-40 mt-4" : "max-h-0 mt-0"}
+                  `}
+                >
+                  <div className="text-sm text-gray-700 ml-2">
+                    <button
+                      className="pl-4"
+                      onClick={() => {
+                        setSegments(3);
+                        setModal("3-1");
+                      }}
+                    >
+                      What's included?
+                    </button>
+                  </div>
+                  <div className="text-sm text-gray-700 ml-2">
+                    <button
+                      className="pl-4"
+                      onClick={() => {
+                        setSegments(3);
+                        setModal("3-2");
+                      }}
+                    >
+                      Making a claim
+                    </button>
+                  </div>
+                  <div className="text-sm text-gray-700 ml-2">
+                    <button
+                      className="pl-4"
+                      onClick={() => {
+                        setSegments(3);
+                        setModal("3-3");
+                      }}
+                    >
+                      Get more from your Life plan
+                    </button>
+                  </div>
+                  <div className="text-sm text-gray-700 ml-2">
+                    <button
+                      className="pl-4"
+                      onClick={() => {
+                        setSegments(3);
+                        setModal("3-4");
                       }}
                     >
                       Inspirational stories
