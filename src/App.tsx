@@ -519,7 +519,7 @@ export default function App() {
                   setSegments(1);
                 }}
               >
-                Return to World of Vitality
+                Return to the World of Vitality
               </button>
             </div>
           </Modal>
@@ -593,7 +593,7 @@ export default function App() {
                       setSegments(1);
                     }}
                   >
-                    Return to World of Vitality
+                    Return to the World of Vitality
                   </button>
                 </div>
               </div>
@@ -698,7 +698,7 @@ export default function App() {
                       setSegments(1);
                     }}
                   >
-                    Return to World of Vitality
+                    Return to the World of Vitality
                   </button>
                 </div>
 
@@ -905,7 +905,7 @@ export default function App() {
                     setSegments(2);
                   }}
                 >
-                  Return to World of Vitality
+                  Return to the World of Vitality
                 </button>
               </div>
             </div>
@@ -968,7 +968,7 @@ export default function App() {
                     setSegments(2);
                   }}
                 >
-                  Return to World of Vitality
+                  Return to the World of Vitality
                 </button>
               </div>
             </div>
@@ -1011,7 +1011,7 @@ export default function App() {
                       setSegments(2);
                     }}
                   >
-                    Return to World of Vitality
+                    Return to the World of Vitality
                   </button>
                 </div>
               </div>
@@ -1124,7 +1124,7 @@ export default function App() {
                   setSegments(2);
                 }}
               >
-                Return to World of Vitality
+                Return to the World of Vitality
               </button>
             </div>
           </Modal>
@@ -1574,7 +1574,7 @@ export default function App() {
                       setSegments(4);
                     }}
                   >
-                    Return to World of Vitality
+                    Return to the World of Vitality
                   </button>
                 </div>
               </div>
@@ -1694,7 +1694,7 @@ export default function App() {
                       setSegments(4);
                     }}
                   >
-                    Return to World of Vitality
+                    Return to the World of Vitality
                   </button>
                 </div>
               </div>
@@ -1774,7 +1774,7 @@ export default function App() {
                       setSegments(4);
                     }}
                   >
-                    Return to World of Vitality
+                    Return to the World of Vitality
                   </button>
                 </div>
               </div>
