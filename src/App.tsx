@@ -24,6 +24,7 @@ import gsap from "gsap";
 import { useWindowSize } from "react-use";
 import CookieConsent from "react-cookie-consent";
 import ReactGA from "react-ga";
+import ReactGA4 from "react-ga4";
 
 export default function App() {
   const logoRef = useRef<HTMLImageElement>(null);
@@ -38,15 +39,18 @@ export default function App() {
   //Initialise GA
   ReactGA.initialize("G-T1MR3CB3Q1");
 
-  //React trigger GA Event on button click
-  const sendOutbound = () => {
-    console.log('sendOutbound');
-    ReactGA.event({
-      category: "TestCategory",
-      action: "testAction",
-      label: "testLabel",
+  //Initialise GA4
+  ReactGA4.initialize("G-T1MR3CB3Q1")
+
+  //React trigger GA Event on button click and pass the user action as a parameter
+  const sendOutbound = (category : string, userAction : string, label : string) => {
+    console.log("sendOutbound");
+    ReactGA4.event({
+      category: category,
+      action: userAction,
+      label: label,
     });
-  }
+  };
 
   useEffect(() => {
     if (progress === 100) {
@@ -91,7 +95,7 @@ export default function App() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.5, duration: 0.5 }}
             className="fixed top-8 left-8 bg-primary text-white p-2 rounded-full text-2xl z-10"
-            onClick={() => setSegments(0)}
+            onClick={() => {setSegments(0); sendOutbound('UserPageAction', 'Back to the World of Vitality', 'User Clicked Back to the World of Vitality')}}
           >
             <div className="flex gap-1">
               <BiSolidHome />
@@ -132,7 +136,7 @@ export default function App() {
               choices. Because the healthier you are, the better for all of us.
             </p>
             <button
-              onClick={() => {setReadyToExplore(true); sendOutbound()}}
+              onClick={() => {setReadyToExplore(true); sendOutbound('UserPageAction', 'Clicked Explore now', 'User Clicked Explore now')}}
               className="bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
             >
               Explore now
@@ -464,7 +468,7 @@ export default function App() {
               boost your Vitality status.
             </p>
             <button
-              onClick={() => setModal("")}
+              onClick={() => {setModal(""); sendOutbound('UserPageAction', 'Visited Rewardsville', 'User Visited Rewardsville')}}
               className="bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
             >
               Explore now
@@ -772,7 +776,7 @@ export default function App() {
               .
             </p>
             <button
-              onClick={() => setModal("")}
+              onClick={() => {setModal(""); sendOutbound('UserPageAction', 'Visited Health Insurance Hills', 'User Visited Health Insurance Hills')}}
               className="bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
             >
               Explore now
@@ -1196,7 +1200,7 @@ export default function App() {
               illnesses you're covered for.
             </p>
             <button
-              onClick={() => setModal("")}
+              onClick={() => {setModal(""); sendOutbound('UserPageAction', 'Visited Life Insurance Land', 'User Visited Life Insurance Land')}}
               className="bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
             >
               Explore now
@@ -1552,7 +1556,10 @@ export default function App() {
               .
             </p>
             <button
-              onClick={() => setModal("")}
+              onClick={() => {
+                setModal("");
+                sendOutbound('UserPageAction', 'Visited The Programme Parkway', 'User Visited The Programme Parkway')
+              }}
               className="bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
             >
               Explore now
