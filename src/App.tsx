@@ -23,7 +23,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
 import { useWindowSize } from "react-use";
 import CookieConsent from "react-cookie-consent";
-import ReactGA from "react-ga";
+import ReactGA, { send } from "react-ga";
 import ReactGA4 from "react-ga4";
 
 export default function App() {
@@ -194,6 +194,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(2);
                         setModal("2-1");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened whats included",
+                          "User Opened whats included"
+                        );
                       }}
                     >
                       What's included?
@@ -205,6 +210,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(2);
                         setModal("2-2");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened Using your health plan",
+                          "User Opened Using your health plan"
+                        );
                       }}
                     >
                       Using your health plan
@@ -216,6 +226,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(2);
                         setModal("2-3");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened Speaking to a GP",
+                          "User Opened Speaking to a GP"
+                        );
                       }}
                     >
                       Speaking to a GP
@@ -227,6 +242,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(2);
                         setModal("2-4");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened Full Cover Promise",
+                          "User Opened Full Cover Promise"
+                        );
                       }}
                     >
                       Full Cover Promise
@@ -238,6 +258,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(2);
                         setModal("2-5");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened Inspirational Stories",
+                          "User Opened Inspirational Stories"
+                        );
                       }}
                     >
                       Inspirational stories
@@ -270,6 +295,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(3);
                         setModal("3-1");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened Whats included",
+                          "User Opened Whats included"
+                        );
                       }}
                     >
                       What's included?
@@ -281,6 +311,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(3);
                         setModal("3-2");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened Making a claim",
+                          "User Opened Making a claim"
+                        );
                       }}
                     >
                       Making a claim
@@ -292,6 +327,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(3);
                         setModal("3-3");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened Get more from your Life plan",
+                          "User Opened Get more from your Life plan"
+                        );
                       }}
                     >
                       Get more from your Life plan
@@ -303,6 +343,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(3);
                         setModal("3-4");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened Inspirational Stories",
+                          "User Opened Inspirational Stories"
+                        );
                       }}
                     >
                       Inspirational stories
@@ -335,6 +380,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(4);
                         setModal("4-1");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened How do I get started?",
+                          "User Opened How do I get started?"
+                        );
                       }}
                     >
                       How do I get started?
@@ -346,6 +396,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(4);
                         setModal("4-2");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened How to register",
+                          "User Opened How to register"
+                        );
                       }}
                     >
                       How to register
@@ -357,6 +412,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(4);
                         setModal("4-3");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened Tracking your activity",
+                          "User Opened Tracking your activity"
+                        );
                       }}
                     >
                       Tracking your activity
@@ -389,6 +449,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(1);
                         setModal("1-1");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened What's a Vitality status",
+                          "User Opened What's a Vitality status"
+                        );
                       }}
                     >
                       What's a Vitality status?
@@ -400,6 +465,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(1);
                         setModal("1-2");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened How do I get points",
+                          "User Opened How do I get points"
+                        );
                       }}
                     >
                       How do I get points?
@@ -411,6 +481,11 @@ export default function App() {
                       onClick={() => {
                         setSegments(1);
                         setModal("1-3");
+                        sendOutbound(
+                          "UserPageAction",
+                          "Opened What rewards do I get",
+                          "User Opened What rewards do I get"
+                        );
                       }}
                     >
                       What rewards do I get?
@@ -483,7 +558,10 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("");
+                  sendOutbound('UserPageAction', 'Closed What is a Vitality status', 'User Closed What is a Vitality status');
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -555,6 +633,11 @@ export default function App() {
                 onClick={() => {
                   setModal("");
                   setSegments(1);
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed What is a Vitality status",
+                    "User Closed What is a Vitality status"
+                  );
                 }}
               >
                 Return to the World of Vitality
@@ -570,7 +653,10 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("");
+                  sendOutbound('UserPageAction', 'Closed How do I get points', 'User Closed How do I get points');
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -618,7 +704,14 @@ export default function App() {
                   </p>
                   <button
                     className="bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
-                    onClick={() => setModal("1-3")}
+                    onClick={() => {
+                      setModal("1-3");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Closed How do I get points",
+                        "User Closed How do I get points"
+                      );
+                    }}
                   >
                     Move to the next building
                   </button>
@@ -629,6 +722,7 @@ export default function App() {
                     onClick={() => {
                       setModal("");
                       setSegments(1);
+                      sendOutbound('UserPageAction', 'Closed How do I get points', 'User Closed How do I get points');
                     }}
                   >
                     Return to the World of Vitality
@@ -649,7 +743,10 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("");
+                  sendOutbound('UserPageAction', 'Closed What rewards do I get', 'User Closed What rewards do I get');
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -734,6 +831,7 @@ export default function App() {
                     onClick={() => {
                       setModal("");
                       setSegments(1);
+                      sendOutbound('UserPageAction', 'Closed What rewards do I get', 'User Closed What rewards do I get');
                     }}
                   >
                     Return to the World of Vitality
@@ -791,7 +889,10 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("");
+                  sendOutbound('UserPageAction', 'Closed Whats included', 'User Closed Whats included');
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -816,6 +917,11 @@ export default function App() {
                     onClick={() => {
                       setModal("");
                       setSegments(2);
+                      sendOutbound(
+                        "UserPageAction",
+                        "Closed Whats included",
+                        "User Closed Whats included"
+                      );
                     }}
                   >
                     Return to the World of Vitality
@@ -870,7 +976,10 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("")
+                  sendOutbound('UserPageAction', 'Closed Using your health plan', 'User Closed Using your health plan')
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -941,6 +1050,11 @@ export default function App() {
                   onClick={() => {
                     setModal("");
                     setSegments(2);
+                    sendOutbound(
+                      "UserPageAction",
+                      "Closed Using your health plan",
+                      "User Closed Using your health plan"
+                    );
                   }}
                 >
                   Return to the World of Vitality
@@ -957,7 +1071,14 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("");
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed Speaking to a GP",
+                    "User Closed Speaking to a GP"
+                  );
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -1004,6 +1125,11 @@ export default function App() {
                   onClick={() => {
                     setModal("");
                     setSegments(2);
+                    sendOutbound(
+                      "UserPageAction",
+                      "Closed Speaking to a GP",
+                      "User Closed Speaking to a GP"
+                    );
                   }}
                 >
                   Return to the World of Vitality
@@ -1020,7 +1146,14 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("")
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed Full Cover Promise",
+                    "User Closed Full Cover Promise"
+                  );
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -1047,6 +1180,11 @@ export default function App() {
                     onClick={() => {
                       setModal("");
                       setSegments(2);
+                      sendOutbound(
+                        "UserPageAction",
+                        "Closed Full Cover Promise",
+                        "User Closed Full Cover Promise"
+                      );
                     }}
                   >
                     Return to the World of Vitality
@@ -1109,7 +1247,14 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("");
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed Inspirational stories",
+                    "User Closed Inspirational stories"
+                  );
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -1160,6 +1305,11 @@ export default function App() {
                 onClick={() => {
                   setModal("");
                   setSegments(2);
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed Inspirational stories",
+                    "User Closed Inspirational stories"
+                  );
                 }}
               >
                 Return to the World of Vitality
@@ -1215,7 +1365,10 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("")
+                  sendOutbound('UserPageAction', 'Closed Whats included', 'User Closed Whats included')
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -1241,6 +1394,11 @@ export default function App() {
                     onClick={() => {
                       setModal("");
                       setSegments(3);
+                      sendOutbound(
+                        "UserPageAction",
+                        "Closed Whats included",
+                        "User Closed Whats included"
+                      );
                     }}
                   >
                     Return to the World of Vitality
@@ -1295,7 +1453,14 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("")
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed Making a claim",
+                    "User Closed Making a claim"
+                  );
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -1341,6 +1506,11 @@ export default function App() {
                     onClick={() => {
                       setModal("");
                       setSegments(3);
+                      sendOutbound(
+                        "UserPageAction",
+                        "Closed Making a claim",
+                        "User Closed Making a claim"
+                      );
                     }}
                   >
                     Return to the World of Vitality
@@ -1358,7 +1528,14 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("");
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed Get more from your Life plan",
+                    "User Closed Get more from your Life plan"
+                  );
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -1384,6 +1561,11 @@ export default function App() {
                     onClick={() => {
                       setModal("");
                       setSegments(3);
+                      sendOutbound(
+                        "UserPageAction",
+                        "Closed Get more from your Life plan",
+                        "User Closed Get more from your Life plan"
+                      );
                     }}
                   >
                     Return to the World of Vitality
@@ -1412,7 +1594,14 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("");
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed Inspirational stories",
+                    "User Closed Inspirational stories"
+                  );
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -1461,68 +1650,14 @@ export default function App() {
                   onClick={() => {
                     setModal("");
                     setSegments(3);
+                    sendOutbound(
+                      "UserPageAction",
+                      "Closed Inspirational stories",
+                      "User Closed Inspirational stories"
+                    );
                   }}
                 >
                   Return to the World of Vitality
-                </button>
-              </div>
-            </div>
-          </Modal>
-        )}
-        {modal === "3-5" && (
-          <Modal key="life-5" noPadding>
-            <div className="bg-primary w-full text-white flex justify-between items-center py-8 px-10">
-              <h1 className="text-2xl font-semibold text-white">Testing</h1>
-              <button
-                className="text-white text-2xl"
-                onClick={() => setModal("")}
-              >
-                <IoIosCloseCircleOutline />
-              </button>
-            </div>
-
-            <div className="w-full px-10 py-8">
-              <h2 className="text-xl text-gray-700 mb-4">
-                "How Vitality changed my life"
-              </h2>
-              <p className="text-sm mt-4 text-secondary">
-                We don't believe life insurance should only be used when the
-                unthinkable happens. Find out how Vitality helped to turn Chris'
-                life around.
-              </p>
-            </div>
-            <div className="py-12 px-24 bg-ice-blue">
-              <video
-                src="/Vitality_Life-Insurance_Inspirational-Stories.mp4"
-                controls
-                className="w-full aspect-video object-cover"
-              ></video>
-            </div>
-            <div className="w-full px-10 py-8">
-              <h2 className="text-xl text-gray-700 mb-4">
-                “I saw it as a chance to kickstart a new me.”
-              </h2>
-              <p className="text-sm mt-4 text-secondary">
-                Find out how how a Vitality life plan helped Annette transform
-                her health and fitness.
-              </p>
-              <a
-                href="https://adviser.vitality.co.uk/insights/annettes-story-i-saw-it-as-a-chance-to-kickstart-a-new-me/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
-              >
-                Read more
-              </a>
-              <div className="w-full flex justify-start">
-                <button
-                  className="bg-[#dddddd] text-sm text-[#222222] px-6 py-3 rounded-md mt-4 font-semibold"
-                  onClick={() => {
-                    setModal("");
-                    setSegments(3);
-                  }}
-                >
-                  Return to Life Insurance Land
                 </button>
               </div>
             </div>
@@ -1558,7 +1693,7 @@ export default function App() {
             <button
               onClick={() => {
                 setModal("");
-                sendOutbound('UserPageAction', 'Visited The Programme Parkway', 'User Visited The Programme Parkway')
+                sendOutbound('UserPageAction', 'Visited The Programme Parkway', 'User Visited The Programme Parkway');
               }}
               className="bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
             >
@@ -1574,7 +1709,10 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("");
+                  sendOutbound('UserPageAction', 'Closed How do I get started', 'User Closed How do I get started');
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -1613,6 +1751,11 @@ export default function App() {
                     onClick={() => {
                       setModal("");
                       setSegments(4);
+                      sendOutbound(
+                        "UserPageAction",
+                        "Closed How do I get started",
+                        "User Closed How do I get started"
+                      );
                     }}
                   >
                     Return to the World of Vitality
@@ -1671,7 +1814,14 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("");
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed How to register",
+                    "User Closed How to register"
+                  );
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -1733,6 +1883,11 @@ export default function App() {
                     onClick={() => {
                       setModal("");
                       setSegments(4);
+                      sendOutbound(
+                        "UserPageAction",
+                        "Closed How to register",
+                        "User Closed How to register"
+                      );
                     }}
                   >
                     Return to the World of Vitality
@@ -1750,7 +1905,14 @@ export default function App() {
               </h1>
               <button
                 className="text-white text-2xl"
-                onClick={() => setModal("")}
+                onClick={() => {
+                  setModal("");
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed Tracking your activity",
+                    "User Closed Tracking your activity"
+                  );
+                }}
               >
                 <IoIosCloseCircleOutline />
               </button>
@@ -1802,6 +1964,11 @@ export default function App() {
                     onClick={() => {
                       setModal("1-0");
                       setSegments(1);
+                      sendOutbound(
+                        "UserPageAction",
+                        "Closed Tracking your activity",
+                        "User Closed Tracking your activity"
+                      );
                     }}
                   >
                     Next stop - Rewardsville
@@ -1813,6 +1980,11 @@ export default function App() {
                     onClick={() => {
                       setModal("");
                       setSegments(4);
+                      sendOutbound(
+                        "UserPageAction",
+                        "Closed Tracking your activity",
+                        "User Closed Tracking your activity"
+                      );
                     }}
                   >
                     Return to the World of Vitality
@@ -1892,6 +2064,20 @@ const Scene = ({
   modal: string;
   setModal: (modal: string) => void;
 }) => {
+  //React trigger GA Event on button click and pass the user action as a parameter
+  const sendOutbound = (
+    category: string,
+    userAction: string,
+    label: string
+  ) => {
+    console.log("sendOutbound");
+    ReactGA4.event({
+      category: category,
+      action: userAction,
+      label: label,
+    });
+  };
+
   return (
     <Canvas
       shadows
@@ -1968,6 +2154,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("1-1");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened Whats a Vitality status",
+                        "User Opened Whats a Vitality status"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -1999,6 +2190,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("1-2");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened How do I get points",
+                        "User Opened How do I get points"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -2030,6 +2226,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("1-3");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened What rewards do I get",
+                        "User Opened What rewards do I get"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -2094,6 +2295,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("2-1");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened Whats Included",
+                        "User Opened Whats Included"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -2125,6 +2331,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("2-2");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened Using Your Health Plan",
+                        "User Opened Using Your Health Plan"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -2156,6 +2367,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("2-3");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened Speaking to a GP",
+                        "User Opened Speaking to a GP"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -2187,6 +2403,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("2-4");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened Full Cover Promise",
+                        "User Opened Full Cover Promise"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -2218,6 +2439,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("2-5");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened Inspirational stories",
+                        "User Opened Inspirational stories"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -2282,6 +2508,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("3-1");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened Whats Included",
+                        "User Opened Whats Included"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -2313,6 +2544,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("3-2");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened Making a claim",
+                        "User Opened Making a claim"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -2344,6 +2580,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("3-3");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened Get more from your Life plan",
+                        "User Opened Get more from your Life plan"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -2375,6 +2616,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("3-4");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened Inspirational stories",
+                        "User Opened Inspirational stories"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -2439,6 +2685,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("4-1");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened How do I get started",
+                        "User Opened How do I get started"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -2470,6 +2721,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("4-2");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened How to register",
+                        "User Opened How to register"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
@@ -2501,6 +2757,11 @@ const Scene = ({
                     className="text-primary flex flex-col justify-center items-center"
                     onClick={() => {
                       setModal("4-3");
+                      sendOutbound(
+                        "UserPageAction",
+                        "Opened Tracking your activity",
+                        "User Opened Tracking your activity"
+                      );
                     }}
                   >
                     <div className="border-2 border-primary bg-white px-2 pt-1 rounded-lg">
