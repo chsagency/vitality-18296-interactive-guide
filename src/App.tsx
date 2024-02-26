@@ -22,6 +22,8 @@ import { MdPinch } from "react-icons/md";
 import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
 import { useWindowSize } from "react-use";
+import CookieConsent from "react-cookie-consent";
+import ReactGA from "react-ga";
 
 export default function App() {
   const logoRef = useRef<HTMLImageElement>(null);
@@ -33,6 +35,19 @@ export default function App() {
   const { progress } = useProgress();
   const { width, height } = useWindowSize();
 
+  //Initialise GA
+  ReactGA.initialize("G-T1MR3CB3Q1");
+
+  //React trigger GA Event on button click
+  const sendOutbound = () => {
+    console.log('sendOutbound');
+    ReactGA.event({
+      category: "TestCategory",
+      action: "testAction",
+      label: "testLabel",
+    });
+  }
+
   useEffect(() => {
     if (progress === 100) {
       !isLoaded && setTimeout(() => setIsLoaded(true), 1500);
@@ -41,6 +56,23 @@ export default function App() {
 
   return (
     <>
+      <div className="App">
+        <CookieConsent
+          disableStyles={true}
+          buttonText="Accept cookies"
+          buttonClasses="cc-btn cc-btn-primary"
+        >
+          Vitality.co.uk uses cookies to offer you a better browsing experience,
+          analyse site traffic, and serve relevant personalised content and
+          advertisements. Read about how we use cookies and how you can control
+          them in our{" "}
+          <a href="https://www.vitality.co.uk/accessibility/cookies">
+            cookie policy
+          </a>
+          . If you continue to use this site, you consent to use our use of
+          cookies.
+        </CookieConsent>
+      </div>
       <img
         src="/logo.png"
         alt=""
@@ -100,7 +132,7 @@ export default function App() {
               choices. Because the healthier you are, the better for all of us.
             </p>
             <button
-              onClick={() => setReadyToExplore(true)}
+              onClick={() => {setReadyToExplore(true); sendOutbound()}}
               className="bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
             >
               Explore now

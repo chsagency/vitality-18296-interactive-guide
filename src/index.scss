@@ -42,3 +42,41 @@
 .border-color-primary {
   border-color: #f41c5e;
 }
+
+.CookieConsent {
+  background: #f2f2f2;
+  border-top: 1px solid #ddd;
+  bottom: 0;
+  color: #333;
+  font-family: "Hind Vadodara",sans-serif;
+  font-size: 14px;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  a {
+    color: #f41c5e;
+    text-decoration: underline;
+  }
+
+  //On mobile flex column
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+.cc-btn {
+  border: solid 2px #f41c5e;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #f41c5e;
+  min-width: 200px;
+}
