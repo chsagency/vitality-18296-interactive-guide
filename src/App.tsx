@@ -95,7 +95,14 @@ export default function App() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.5, duration: 0.5 }}
             className="fixed top-8 left-8 bg-primary text-white p-2 rounded-full text-2xl z-10"
-            onClick={() => {setSegments(0); sendOutbound('UserPageAction', 'Back to the World of Vitality', 'User Clicked Back to the World of Vitality')}}
+            onClick={() => {
+              setSegments(0);
+              sendOutbound(
+                "UserPageAction",
+                "Back to the World of Vitality",
+                "User Clicked Back to the World of Vitality"
+              );
+            }}
           >
             <div className="flex gap-1">
               <BiSolidHome />
@@ -136,7 +143,14 @@ export default function App() {
               choices. Because the healthier you are, the better for all of us.
             </p>
             <button
-              onClick={() => {setReadyToExplore(true); sendOutbound('UserPageAction', 'Clicked Explore now', 'User Clicked Explore now')}}
+              onClick={() => {
+                setReadyToExplore(true);
+                sendOutbound(
+                  "UserPageAction",
+                  "Clicked Explore now",
+                  "User Clicked Explore now"
+                );
+              }}
               className="bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
             >
               Explore now
@@ -543,7 +557,14 @@ export default function App() {
               boost your Vitality status.
             </p>
             <button
-              onClick={() => {setModal(""); sendOutbound('UserPageAction', 'Visited Rewardsville', 'User Visited Rewardsville')}}
+              onClick={() => {
+                setModal("");
+                sendOutbound(
+                  "UserPageAction",
+                  "Visited Rewardsville",
+                  "User Visited Rewardsville"
+                );
+              }}
               className="bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
             >
               Explore now
@@ -560,7 +581,11 @@ export default function App() {
                 className="text-white text-2xl"
                 onClick={() => {
                   setModal("");
-                  sendOutbound('UserPageAction', 'Closed What is a Vitality status', 'User Closed What is a Vitality status');
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed What is a Vitality status",
+                    "User Closed What is a Vitality status"
+                  );
                 }}
               >
                 <IoIosCloseCircleOutline />
@@ -655,7 +680,11 @@ export default function App() {
                 className="text-white text-2xl"
                 onClick={() => {
                   setModal("");
-                  sendOutbound('UserPageAction', 'Closed How do I get points', 'User Closed How do I get points');
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed How do I get points",
+                    "User Closed How do I get points"
+                  );
                 }}
               >
                 <IoIosCloseCircleOutline />
@@ -681,7 +710,7 @@ export default function App() {
                   Earn points from the word go
                 </h2>
                 <p className="text-sm mt-4 text-secondary">
-                  When you first take your health review, you'll be awarded
+                  When you first take your Health Profile, you'll be awarded
                   Vitality points. After that it's easy to keep them building up
                   – every time you track an eligible activity, you gain points.
                 </p>
@@ -722,7 +751,11 @@ export default function App() {
                     onClick={() => {
                       setModal("");
                       setSegments(1);
-                      sendOutbound('UserPageAction', 'Closed How do I get points', 'User Closed How do I get points');
+                      sendOutbound(
+                        "UserPageAction",
+                        "Closed How do I get points",
+                        "User Closed How do I get points"
+                      );
                     }}
                   >
                     Return to the World of Vitality
@@ -745,7 +778,11 @@ export default function App() {
                 className="text-white text-2xl"
                 onClick={() => {
                   setModal("");
-                  sendOutbound('UserPageAction', 'Closed What rewards do I get', 'User Closed What rewards do I get');
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed What rewards do I get",
+                    "User Closed What rewards do I get"
+                  );
                 }}
               >
                 <IoIosCloseCircleOutline />
@@ -831,7 +868,11 @@ export default function App() {
                     onClick={() => {
                       setModal("");
                       setSegments(1);
-                      sendOutbound('UserPageAction', 'Closed What rewards do I get', 'User Closed What rewards do I get');
+                      sendOutbound(
+                        "UserPageAction",
+                        "Closed What rewards do I get",
+                        "User Closed What rewards do I get"
+                      );
                     }}
                   >
                     Return to the World of Vitality
@@ -874,7 +915,14 @@ export default function App() {
               .
             </p>
             <button
-              onClick={() => {setModal(""); sendOutbound('UserPageAction', 'Visited Health Insurance Hills', 'User Visited Health Insurance Hills')}}
+              onClick={() => {
+                setModal("");
+                sendOutbound(
+                  "UserPageAction",
+                  "Visited Health Insurance Hills",
+                  "User Visited Health Insurance Hills"
+                );
+              }}
               className="bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
             >
               Explore now
@@ -891,7 +939,11 @@ export default function App() {
                 className="text-white text-2xl"
                 onClick={() => {
                   setModal("");
-                  sendOutbound('UserPageAction', 'Closed Whats included', 'User Closed Whats included');
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed Whats included",
+                    "User Closed Whats included"
+                  );
                 }}
               >
                 <IoIosCloseCircleOutline />
@@ -977,8 +1029,12 @@ export default function App() {
               <button
                 className="text-white text-2xl"
                 onClick={() => {
-                  setModal("")
-                  sendOutbound('UserPageAction', 'Closed Using your health plan', 'User Closed Using your health plan')
+                  setModal("");
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed Using your health plan",
+                    "User Closed Using your health plan"
+                  );
                 }}
               >
                 <IoIosCloseCircleOutline />
@@ -1147,7 +1203,7 @@ export default function App() {
               <button
                 className="text-white text-2xl"
                 onClick={() => {
-                  setModal("")
+                  setModal("");
                   sendOutbound(
                     "UserPageAction",
                     "Closed Full Cover Promise",
@@ -1260,32 +1316,14 @@ export default function App() {
               </button>
             </div>
 
-            <div className="w-full px-10 py-8">
-              <h2 className="text-xl text-gray-700 mb-4">
-                "Cancer is never easy... but my health insurance makes it
-                easier"
-              </h2>
-              <p className="text-sm mt-4 text-secondary">
-                Vitality not only helped Georgie with an early diagnosis - but
-                allows her to still do the things she loves.
-              </p>
-              <a
-                href="https://adviser.vitality.co.uk/insights/georgie-round-member-story/"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-block bg-primary text-sm text-white px-6 py-3 rounded-md mt-6 font-semibold"
-              >
-                Read how
-              </a>
-            </div>
             <div className="w-full py-12 px-10 bg-ice-blue">
               <h2 className="text-xl text-gray-700 mb-4">
-                "I've always been overweight, and I could see there was going to
-                be a tipping point, and I had to do something about that."
+                "I was able to access a consultant really quickly on Vitality
+                and within days I was seen by a cardiologist."
               </h2>
               <p className="text-sm mt-4 text-secondary">
                 Watch below to find out how getting involved with parkrun turned
-                Curtis' life around.
+                Athos' life around.
               </p>
               <div className="pt-12 pb-0 flex justify-center">
                 <iframe
@@ -1350,7 +1388,14 @@ export default function App() {
               illnesses you're covered for.
             </p>
             <button
-              onClick={() => {setModal(""); sendOutbound('UserPageAction', 'Visited Life Insurance Land', 'User Visited Life Insurance Land')}}
+              onClick={() => {
+                setModal("");
+                sendOutbound(
+                  "UserPageAction",
+                  "Visited Life Insurance Land",
+                  "User Visited Life Insurance Land"
+                );
+              }}
               className="bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
             >
               Explore now
@@ -1366,8 +1411,12 @@ export default function App() {
               <button
                 className="text-white text-2xl"
                 onClick={() => {
-                  setModal("")
-                  sendOutbound('UserPageAction', 'Closed Whats included', 'User Closed Whats included')
+                  setModal("");
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed Whats included",
+                    "User Closed Whats included"
+                  );
                 }}
               >
                 <IoIosCloseCircleOutline />
@@ -1454,7 +1503,7 @@ export default function App() {
               <button
                 className="text-white text-2xl"
                 onClick={() => {
-                  setModal("")
+                  setModal("");
                   sendOutbound(
                     "UserPageAction",
                     "Closed Making a claim",
@@ -1609,12 +1658,12 @@ export default function App() {
 
             <div className="w-full px-10 py-8">
               <h2 className="text-xl text-gray-700 mb-4">
-                "How Vitality changed my life"
+                "I'm still covered even after claiming twice"
               </h2>
               <p className="text-sm mt-4 text-secondary">
                 We don't believe life insurance should only be used when the
-                unthinkable happens. Find out how Vitality helped to turn Chris'
-                life around.
+                unthinkable happens. Find out how Vitality helped to turn
+                Haley's life around.
               </p>
             </div>
             <div className="py-12 flex justify-center w-full bg-ice-blue">
@@ -1679,7 +1728,7 @@ export default function App() {
             </p>
             <p className="text-center text-sm mt-4 text-secondary">
               To find out which rewards you have available on your plan, simply
-              check your plan documents in{" "}
+              Get Rewarded in{" "}
               <a
                 href="https://members.vitality.co.uk/"
                 target="_blank"
@@ -1693,7 +1742,11 @@ export default function App() {
             <button
               onClick={() => {
                 setModal("");
-                sendOutbound('UserPageAction', 'Visited The Programme Parkway', 'User Visited The Programme Parkway');
+                sendOutbound(
+                  "UserPageAction",
+                  "Visited The Programme Parkway",
+                  "User Visited The Programme Parkway"
+                );
               }}
               className="bg-primary text-sm text-white px-6 py-3 rounded-md mt-4 font-semibold"
             >
@@ -1711,7 +1764,11 @@ export default function App() {
                 className="text-white text-2xl"
                 onClick={() => {
                   setModal("");
-                  sendOutbound('UserPageAction', 'Closed How do I get started', 'User Closed How do I get started');
+                  sendOutbound(
+                    "UserPageAction",
+                    "Closed How do I get started",
+                    "User Closed How do I get started"
+                  );
                 }}
               >
                 <IoIosCloseCircleOutline />
@@ -1868,14 +1925,12 @@ export default function App() {
                   away.
                 </p>
                 <b className="block text-sm mt-4 text-secondary">
-                  Complete your Health Review
+                  Create your health profile
                 </b>
                 <p className="text-sm mt-1 text-secondary">
-                  It'll just take 5 minutes and we'll instantly award you up to
-                  200 Vitality points. Don't worry, the information you give us
-                  isn't used against you. But it helps us provide tailored
-                  health recommendations which, in turn, can help you unlock
-                  your rewards.
+                  Take a few minutes to better understand your health, get tips
+                  on how to get healthier, and unlock access to your rewards.
+                  You can also earn up to 200 points.
                 </p>
                 <div className="w-full flex justify-start">
                   <button
@@ -1942,17 +1997,9 @@ export default function App() {
                 </h2>
                 <p className="text-sm mt-4 text-secondary">
                   They're a great way to track your workouts, and make sure
-                  you're getting rewarded for them. Check out the activity
-                  trackers{" "}
-                  <a
-                    href="https://www.vitality.co.uk/rewards/partners/activity-tracking/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-primary font-semibold underline"
-                  >
-                    we recommend
-                  </a>{" "}
-                  - and you may even be able to apply a Vitality discount.
+                  you're getting rewarded for them. Get discounts on Fitbit,
+                  Garmin, Polar, Samsung and Withings devices as part of your
+                  plan.
                 </p>
                 <div className="border-2 border-primary mt-4 p-4 rounded-lg">
                   <p className="text-sm font-semibold text-secondary">
