@@ -1329,7 +1329,7 @@ export default function App() {
                 <iframe
                   width="560"
                   height="315"
-                  src="https://www.youtube.com/embed/JrUfHafBvg4"
+                  src="https://www.youtube.com/embed/Xxya0eixJAs"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1670,7 +1670,7 @@ export default function App() {
               <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/VJZ-gnavgts"
+                src="https://www.youtube.com/embed/t_dg_bs1IL4"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1728,7 +1728,7 @@ export default function App() {
             </p>
             <p className="text-center text-sm mt-4 text-secondary">
               To find out which rewards you have available on your plan, simply
-              Get Rewarded in{" "}
+              go to Get Rewarded in{" "}
               <a
                 href="https://members.vitality.co.uk/"
                 target="_blank"
